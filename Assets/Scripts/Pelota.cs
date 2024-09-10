@@ -45,7 +45,7 @@ public class Pelota : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     void victory()
@@ -53,7 +53,7 @@ public class Pelota : MonoBehaviour
         GameObject[] bricks = GameObject.FindGameObjectsWithTag("Brick");
         if (bricks.Length == 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
 
     }
