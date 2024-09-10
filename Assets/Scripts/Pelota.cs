@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pelota : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Pelota : MonoBehaviour
     public Vector2 velocidadInicial;
     private Rigidbody2D pelotitaRb;
     bool isMoving;
+    public Score sumarScore;
+    public int puntos;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,13 +26,35 @@ public class Pelota : MonoBehaviour
             isMoving = true;
 
         }
+        victory();
     }
 
     private void OnCollisionEnter2D(Collision2D choque)
     {
         if (choque.gameObject.CompareTag("Brick"))
         {
+            sumarScore.Contador(puntos);
             Destroy(choque.gameObject);
         }
+
+        if (choque.gameObject.CompareTag("Dead"))
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    void victory()
+    {
+        GameObject[] bricks = GameObject.FindGameObjectsWithTag("Brick");
+        if (bricks.Length == 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+
     }
 }
