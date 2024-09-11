@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Pelota : MonoBehaviour
+public class Pelota2 : MonoBehaviour
 {
-
     public Vector2 velocidadInicial;
     private Rigidbody2D pelotitaRb;
     bool isMoving;
@@ -45,7 +44,7 @@ public class Pelota : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     void victory()

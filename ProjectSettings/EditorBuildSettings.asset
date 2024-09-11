@@ -7,6 +7,9 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Nivel1.unity
+    guid: a2d0e741912c4fa49bfe55f4776b28de
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
@@ -14,7 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victoria.unity
     guid: 1a3f713c8bb989e4b8ecf49fba5b077e
-  - enabled: 1
-    path: Assets/Scenes/Nivel2.unity
-    guid: a2d0e741912c4fa49bfe55f4776b28de
   m_configObjects: {}
