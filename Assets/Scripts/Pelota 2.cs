@@ -44,7 +44,7 @@ public class Pelota2 : MonoBehaviour
 
     void GameOver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     void victory()
